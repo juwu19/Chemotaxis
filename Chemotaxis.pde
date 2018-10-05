@@ -1,4 +1,4 @@
- Bac[] jed;
+Bac[] jed;
 void setup(){
   noStroke();
   size(500,500);
@@ -9,11 +9,18 @@ void setup(){
 }
 
 void draw(){
-  background(0);
+  background(255);
   for(int i = 0; i < jed.length; i++){
     jed[i].show();
     jed[i].walk();
   }
+  fill(0,0,0);
+  ellipse(mouseX,mouseY,20,20);
+  ellipse(mouseX-10,mouseY-10,5,5);
+  ellipse(mouseX-10,mouseY+10,5,5);
+  ellipse(mouseX+10,mouseY+10,5,5);
+  ellipse(mouseX+10,mouseY-10,5,5);
+  
 }
 
 class Bac{
@@ -40,6 +47,6 @@ class Bac{
   }
   void show(){
     fill(myColor);
-    ellipse(myX,myY,20,20);
+    ellipse(myX,myY,30,30);
   }
 }
